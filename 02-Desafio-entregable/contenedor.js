@@ -4,8 +4,7 @@ class Contenedor {
 
     constructor(){
         this.misObjetos= [];
-        this.archivo = `./productos.json`;
-
+        this.archivo = `./productos.txt`;
         this.existe();
 
         const data = {
@@ -15,22 +14,18 @@ class Contenedor {
         fs.writeFileSync(this.archivo, JSON.stringify(data, null, '\t'));
     }
 
-    // lee lo que tiene escrito en el archivo, en la data va el path
     readFile(){
         const data =  fs.readFileSync(this.archivo, 'utf-8');
         return JSON.parse(data);
+    }
+    writeFile(data){
+        fs.writeFileSync(this.archivo, JSON.stringify(data, null, '\t'));
     }
 
     async readFileAsync (){
         const data = await fs.promises.readFile(this.archivo, 'utf-8');
         return JSON.parse(data);
       }
-
-    // toma el archivo y escribe lo que esta en data
-    writeFile(data){
-        fs.writeFileSync(this.archivo, JSON.stringify(data, null, '\t'));
-    }
-
     async writeFileAsync(data){
         return await fs.writeFileSync(this.archivo, JSON.stringify(data, null, '\t'));
     }
@@ -44,7 +39,7 @@ class Contenedor {
         } else {
             console.log('Archivo no existe. creando uno nuevo');
             this.misObjetos= [];
-            this.archivo = `./productos.json`;
+            this.archivo = `./productos.txt`;
         }
     }
 
@@ -64,23 +59,6 @@ class Contenedor {
         return `El id asignado es ${p.id}`;
     }
 
-    // getById(id){
-    //     for (let i = 0; i < this.misObjetos.length; i++) {
-    //         const element = this.misObjetos[i];
-    //         if(element.id === id) return element;
-    //     }
-    //     return null;
-    // }
-    // getAll(){
-    //     return this.misObjetos;
-    // }
-    // deleteById(id){
-    //    return this.misObjetos.filter((item) => item.id !== id);
-    // }
-    // deleteAll(){
-    //     return this.misObjetos = [];
-    // }
-
     async getById(id){
     const data =  await this.readFileAsync();
 
@@ -88,7 +66,7 @@ class Contenedor {
         const element = data.misObjetos[i];
         if(element.id === id) return element;
     }
-    return `El articulo es null`;
+    return null;
     }
 
     async getAll(){
@@ -96,7 +74,6 @@ class Contenedor {
         return data.misObjetos;
     }
 
-    // Elimina por id
     async deleteById(id){
         const data = await this.readFileAsync();
         let conelID = data.misObjetos.filter((item) => item.id == id );
@@ -110,20 +87,19 @@ class Contenedor {
         }
     }
 
-    // Elimina todo
     async deleteAll(){
         const data = await this.readFileAsync();
         data.misObjetos = [];
         this.writeFileAsync(data);
         return data.misObjetos;
-        // return `Elimino todos ${data.misObjetos}`;
     }
 }
+
 const miContenedor = new Contenedor();
 const newObj = {
-    title: 'Escuadra2',
+    title: 'Regla',
     price: 1000,
-    thumnail:'https://www.google.com/FiUIARDXAQ'
+    thumnail:'https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo'
 }
 
 miContenedor.save(newObj).then((data) =>{
@@ -132,7 +108,7 @@ miContenedor.save(newObj).then((data) =>{
     console.log('Error al guardar', err);
 })
 
-miContenedor.getById('ee6c1715-235c-4241-b193-e50ee91256b5').then((data) =>{
+miContenedor.getById('ca98cd42-2dd8-4a9b-a5ff-bd9301dde5f4').then((data) =>{
     console.log('El producto segun ese id es: ', data);
 }).catch((err) => {
     console.log('Error al buscar el id', err);
@@ -144,15 +120,15 @@ miContenedor.getAll().then((data) =>{
     console.log('Error al mostrar TODOS los productos:', err);
 })
 
-miContenedor.deleteById('3').then((data) =>{
+miContenedor.deleteById('96149d68-474c-440b-ad46-d41df917245c').then((data) =>{
     console.log('Eliminando segun el id: ', data);
 }).catch((err) => {
     console.log('Error al eliminar por id', err);
 })
 
-miContenedor.deleteAll().then((data) =>{
-    console.log('Eliminando TODOS los productos ', data);
-}).catch((err) => {
-    console.log('Error al eliminar todos los productos', err);
-})
+// miContenedor.deleteAll().then((data) =>{
+//     console.log('Eliminando TODOS los productos ', data);
+// }).catch((err) => {
+//     console.log('Error al eliminar todos los productos', err);
+// })
 

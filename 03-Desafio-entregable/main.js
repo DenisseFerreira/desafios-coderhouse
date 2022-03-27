@@ -1,5 +1,6 @@
 const express = require('express');
 const {Contenedor} = require ('./contenedor');
+const path = require ('path');
 
 const app = express();
 const port = 8080;
@@ -28,10 +29,15 @@ app.get('/productoRandom', async (req, res) => {
   const random = fnRandom(0, salida.length);
   // console.log('RANDOM', random);
   const idRandom = salida[random];
-  // console.log('IDRANDOM', idRandom);
+  // console.log('IDRANDOM', idRandom);0
   const resultado = await Contenedor.getById(idRandom);
   res.json({
     resultado,
   });
 });
 
+
+app.get("/vista", (req, res) => {
+  const myFilePath = path.resolve(__dirname, "./index.html");
+  res.sendFile(myFilePath);
+})

@@ -60,7 +60,6 @@ class Contenedor {
     }
 
     async getById(id){
-        console.log('id*****', id);
     const data =  await this.readFileAsync();
 
     for (let i = 0; i < data.misObjetos.length; i++) {
@@ -103,11 +102,11 @@ const newObj = {
     thumnail:'https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo'
 }
 
-// miContenedor.save(newObj).then((data) =>{
-//     console.log(data);
-// }).catch((err) => {
-//     console.log('Error al guardar', err);
-// })
+miContenedor.save(newObj).then((data) =>{
+    console.log(data);
+}).catch((err) => {
+    console.log('Error al guardar', err);
+})
 
 miContenedor.getById('').then((data) =>{
     console.log('El producto segun el id entregado es: ', data);

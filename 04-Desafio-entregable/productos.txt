@@ -98,15 +98,15 @@
 		},
 		{
 			"id": "8792999d-4995-439d-a8e6-f5df96e70f8d",
-			"title": "Mouse",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"title": "Pegatinas*****",
+			"price": 1050,
+			"thumnail": "https://www.google.com/aclk?sa=l&ai"
 		},
 		{
 			"id": "1cda4705-0578-4d2c-8f86-b5bcb309896b",
-			"title": "Mouse",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		}
 	],
 	"archivo": "./productos.txt"

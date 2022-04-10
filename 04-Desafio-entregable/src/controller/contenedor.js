@@ -93,60 +93,72 @@ class Contenedor {
         this.writeFileAsync(data);
         return data.misObjetos;
     }
+
+    async upDate(id, nuevaData) {
+        // console.log('nuevaData', nuevaData);
+        const data = await this.readFileAsync();
+        const productos = data.misObjetos;
+
+        const indice = productos.findIndex((unProducto) => unProducto.id === id);
+        
+        if (indice < 0) throw new Error('no existe el producto');
+
+        const productUpdated = {
+            id,
+            ...nuevaData,
+          };
+        
+        productos.splice(indice, 1, productUpdated);
+        await this.writeFileAsync(data)
+        return productUpdated;
+        // return data.misObjetos;
+    }
 }
 
-const miContenedor = new Contenedor();
+const miContenedorController = new Contenedor();
 const newObj = {
-    title: 'Regla',
-    price: 1000,
-    thumnail:'https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo'
+    title: 'Regla2',
+    price: 50,
+    thumnail:'httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo'
 }
 
-miContenedor.save(newObj).then((data) =>{
-    console.log(data);
+miContenedorController.upDate('1cda4705-0578-4d2c-8f86-b5bcb309896b', newObj).then((data) =>{
+    // console.log('UPDATE', data);
 }).catch((err) => {
     console.log('Error al guardar', err);
 })
 
-miContenedor.getById('').then((data) =>{
-    console.log('El producto segun el id entregado es: ', data);
-}).catch((err) => {
-    console.log('Error al buscar el id', err);
-})
+// miContenedorController.save(newObj).then((data) =>{
+//     console.log(data);
+// }).catch((err) => {
+//     console.log('Error al guardar', err);
+// })
 
-miContenedor.getAll().then((data) =>{
-    // console.log('Mostrando TODOS los productos: ', data);
-}).catch((err) => {
-    console.log('Error al mostrar TODOS los productos:', err);
-})
+// miContenedorController.getById('').then((data) =>{
+//     console.log('El producto segun el id entregado es: ', data);
+// }).catch((err) => {
+//     console.log('Error al buscar el id', err);
+// })
 
-// miContenedor.deleteById('96149d68-474c-440b-ad46-d41df917245c').then((data) =>{
+// miContenedorController.getAll().then((data) =>{
+//     // console.log('Mostrando TODOS los productos: ', data);
+// }).catch((err) => {
+//     console.log('Error al mostrar TODOS los productos:', err);
+// })
+
+// miContenedorController.deleteById('96149d68-474c-440b-ad46-d41df917245c').then((data) =>{
 //     console.log('Eliminando segun el id: ', data);
 // }).catch((err) => {
 //     console.log('Error al eliminar por id', err);
 // })
 
-// miContenedor.deleteAll().then((data) =>{
+// miContenedorController.deleteAll().then((data) =>{
 //     console.log('Eliminando TODOS los productos ', data);
 // }).catch((err) => {
 //     console.log('Error al eliminar todos los productos', err);
 // })
 
 
-
-// const salida = pepe.map((a) => a.id);
-
-// console.log(salida);
-
-// const random = between(0, salida.length);
-
-// console.log('RANDOM', random);
-
-// const idRandom = salida[random];
-
-// console.log('IDRANDOM', idRandom);
-
-
 module.exports = {
-    Contenedor: miContenedor,
+    ContenedorController: miContenedorController,
 }

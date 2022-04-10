@@ -1,6 +1,6 @@
 const express = require('express');
-const mainRouter = require('./src/routes/index');
-const path = require ('path');
+const mainRouter = require('./router');
+const path = require ('path'); 
 
 const app = express();
 const port = 8080;
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use('/api', mainRouter);
 
-app.get("/vista", (req, res) => {
-  const myFilePath = path.resolve(__dirname, "./index.html");
-  res.sendFile(myFilePath);
-})
+// app.get("/vista", (req, res) => {
+//   const myFilePath = path.resolve(__dirname, "./index.html");
+//   res.sendFile(myFilePath);
+// })

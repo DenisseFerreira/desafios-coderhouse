@@ -1,0 +1,24 @@
+<table style="width:50%">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Precio</th>
+    <th>link</th>
+  </tr>
+  <% contenedor.forEach(anItem=> { %>
+    <tr>
+      <td>
+        <%= anItem.id %>
+      </td>
+      <td>
+        <%= anItem.title %>
+      </td>
+      <td>
+        <%= anItem.price %>
+      </td>
+      <td>
+        <%= anItem.thumnail %>
+      </td>
+    </tr>
+    <% }) %>
+</table>

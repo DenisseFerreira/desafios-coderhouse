@@ -4,15 +4,18 @@
   },
   "name": "02-desafio-entregable",
   "version": "1.0.0",
-  "main": "contenedor.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js",
+    "dev":"node main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "express": "^4.17.3",
     "uuid": "^8.3.2"
   }
 }

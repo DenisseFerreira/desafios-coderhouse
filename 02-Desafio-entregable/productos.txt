@@ -7,12 +7,6 @@
 			"thumnail": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdnx.jumpseller.com%2Flibreria-odisea1%2Fimage%2F8855353%2Fresize%2F480%2F480%3F1643748442&imgrefurl=https%3A%2F%2Fwww.libreriaodisea.cl%2Fgoma-de-borrar-miga-mediana-adix&tbnid=FVMcUgxc4jfmaM&vet=12ahUKEwjDkN6_0dj2AhXpiZUCHec6BG4QMygJegUIARCQAg..i&docid=qs6CAwHo9wHfJM&w=480&h=480&q=goma%20de%20borrar&ved=2ahUKEwjDkN6_0dj2AhXpiZUCHec6BG4QMygJegUIARCQAg"
 		},
 		{
-			"id": "96149d68-474c-440b-ad46-d41df917245c",
-			"title": "Pegamento en barra",
-			"price": 1500,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwiUr53H0Nj2AhUJCZEKHXLaB5QYABADGgJjZQ&sig=AOD64_05YBKFS-wbU-W33D_TY1quoTPG7w&adurl&ctype=5&ved=2ahUKEwjzlo7H0Nj2AhV0iJUCHcMxCO4Qwg96BAgBEGk"
-		},
-		{
 			"id": "36beac85-d008-4d3b-a747-35ac2b5d0be8",
 			"title": "Cuaderno",
 			"price": 2000,
@@ -37,5 +31,5 @@
 			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwjkt_qM0dj2AhWWCpEKHRorB0IYABAHGgJjZQ&sig=AOD64_1wEQmOZUj9pEiJQYz_ZI02Sh24tw&adurl&ctype=5&ved=2ahUKEwjot-uM0dj2AhW0n5UCHeHOBx4Qvhd6BAgBEHU"
 		}
 	],
-	"archivo": "./productos.json"
+	"archivo": "./productos.txt"
 }

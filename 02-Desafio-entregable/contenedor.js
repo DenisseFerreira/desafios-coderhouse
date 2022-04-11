@@ -74,7 +74,7 @@ class Contenedor {
         return data.misObjetos;
     }
 
-    async deleteById(id){
+    async deleteById(id){ //no debe retornar
         const data = await this.readFileAsync();
         let conelID = data.misObjetos.filter((item) => item.id == id );
         data.misObjetos = data.misObjetos.filter((item) => item.id !== id );
@@ -87,8 +87,8 @@ class Contenedor {
         }
     }
 
-    async deleteAll(){
-        const data = await this.readFileAsync();
+    async deleteAll(){//no debe retornar
+        const data = await this.readFileAsync();//no es necesario leer
         data.misObjetos = [];
         this.writeFileAsync(data);
         return data.misObjetos;
@@ -102,29 +102,29 @@ const newObj = {
     thumnail:'https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo'
 }
 
-miContenedor.save(newObj).then((data) =>{
-    console.log(data);
-}).catch((err) => {
-    console.log('Error al guardar', err);
-})
+// miContenedor.save(newObj).then((data) =>{
+//     console.log(data);
+// }).catch((err) => {
+//     console.log('Error al guardar', err);
+// })
 
 miContenedor.getById('ca98cd42-2dd8-4a9b-a5ff-bd9301dde5f4').then((data) =>{
-    console.log('El producto segun ese id es: ', data);
+    console.log('El producto segun el id entregado es: ', data);
 }).catch((err) => {
     console.log('Error al buscar el id', err);
 })
 
 miContenedor.getAll().then((data) =>{
-    console.log('Mostrando TODOS los productos: ', data);
+    // console.log('Mostrando TODOS los productos: ', data);
 }).catch((err) => {
     console.log('Error al mostrar TODOS los productos:', err);
 })
 
-miContenedor.deleteById('96149d68-474c-440b-ad46-d41df917245c').then((data) =>{
-    console.log('Eliminando segun el id: ', data);
-}).catch((err) => {
-    console.log('Error al eliminar por id', err);
-})
+// miContenedor.deleteById('96149d68-474c-440b-ad46-d41df917245c').then((data) =>{
+//     console.log('Eliminando segun el id: ', data);
+// }).catch((err) => {
+//     console.log('Error al eliminar por id', err);
+// })
 
 // miContenedor.deleteAll().then((data) =>{
 //     console.log('Eliminando TODOS los productos ', data);
@@ -132,3 +132,21 @@ miContenedor.deleteById('96149d68-474c-440b-ad46-d41df917245c').then((data) =>{
 //     console.log('Error al eliminar todos los productos', err);
 // })
 
+
+
+// const salida = pepe.map((a) => a.id);
+
+// console.log(salida);
+
+// const random = between(0, salida.length);
+
+// console.log('RANDOM', random);
+
+// const idRandom = salida[random];
+
+// console.log('IDRANDOM', idRandom);
+
+
+module.exports = {
+    Contenedor: miContenedor,
+}

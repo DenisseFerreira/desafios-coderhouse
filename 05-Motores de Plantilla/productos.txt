@@ -1,0 +1,41 @@
+{
+	"misObjetos": [
+		{
+			"id": "bf63d783-f5f3-47d6-a7f8-130b98860061",
+			"title": "Pegatinas*****",
+			"price": 1050,
+			"thumnail": "https://www.google.com/aclk?sa=l&ai"
+		},
+		{
+			"id": "d8507f33-87b6-4dd4-ba33-c097b5373ab0",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "681f44ad-f6b8-4490-b4b0-c5d59d6821f6",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "49047a2c-852d-4bf1-a0e8-0bf2f5bdcffe",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "a6707937-e2bb-427e-b1db-d4efbc8e19e6",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "cfc203e9-2dbe-4835-8a59-025f77bc3832",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		}
+	],
+	"archivo": "./productos.txt"
+}

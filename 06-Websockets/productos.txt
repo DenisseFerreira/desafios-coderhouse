@@ -1,0 +1,71 @@
+{
+	"misObjetos": [
+		{
+			"id": "bf63d783-f5f3-47d6-a7f8-130b98860061",
+			"title": "Pegatinas*****",
+			"price": 1050,
+			"thumnail": "https://www.google.com/aclk?sa=l&ai"
+		},
+		{
+			"id": "d8507f33-87b6-4dd4-ba33-c097b5373ab0",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "681f44ad-f6b8-4490-b4b0-c5d59d6821f6",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "49047a2c-852d-4bf1-a0e8-0bf2f5bdcffe",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "a6707937-e2bb-427e-b1db-d4efbc8e19e6",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "cfc203e9-2dbe-4835-8a59-025f77bc3832",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "07690bf2-5356-4a8e-ad9f-6bf427faaaba",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "314dc00f-1160-4c04-a53d-b24a52a13934",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "059eb16c-65dc-4c4d-b8de-fe452ece545d",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "bd5209e0-237d-4937-9cca-19505d5b438d",
+			"title": "Regla2",
+			"price": 50,
+			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+		},
+		{
+			"id": "ec6d8bb5-2741-4720-96c6-e31771b4ac66",
+			"title": "hy",
+			"price": "t",
+			"thumnail": "ht"
+		}
+	],
+	"archivo": "./productos.txt"
+}

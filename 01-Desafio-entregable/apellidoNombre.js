@@ -10,6 +10,12 @@ class Usuario {
         this.libros = libros;
         this.mascotas = mascotas;
     }
+    // constructor(nombre, apellido) {
+    //     this.nombre = nombre;
+    //     this.apellido = apellido;
+    //     this.libros = [];
+    //     this.mascotas = [];
+    // }
 
     getFullName = () => `Hola! me llamo ${this.nombre} ${this.apellido}`;
     
@@ -27,6 +33,7 @@ class Usuario {
     }
 
     getBookNames() {
+        // this.books.map(aBook => aBook.name)
         let nombresArrayLibros = [];
         for (let i = 0; i < this.libros.length; i++) {
             nombresArrayLibros.push(this.libros[i].nombre);
@@ -36,15 +43,18 @@ class Usuario {
 
 }
 const usuario = new Usuario('Denisse', 'Ferreira', 
-                          [{nombre: 'El gatito con botas',
-                             autor: 'Elizabeth Donoso'}] ,
+                          [{nombre: 'El gatito con botas', autor: 'Elizabeth Donoso'}] ,
                           ['mariposa', 'kety'] );
 
 console.log(usuario.getFullName());
 usuario.addMascota('perri');
 console.log(usuario.countMascotas());
-usuario.addBook({nombre: 'Un perro confundido', autor:'Sofia Donoso'});
+const nameBook = {nombre: 'Un perro confundido', autor:'Sofia Donoso'};
+usuario.addBook(nameBook); // se deben agregar 2 strings
 console.log(usuario.getBookNames());
+
+
+
 
 
 

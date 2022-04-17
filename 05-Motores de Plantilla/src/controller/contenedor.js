@@ -129,12 +129,11 @@ miContenedorController.upDate('1cda4705-0578-4d2c-8f86-b5bcb309896b', newObj).th
     console.log('Error al guardar', err);
 })
 
-miContenedorController.save(newObj).then((data) =>{
-    console.log(data);
-}).catch((err) => {
-    console.log('Error al guardar', err);
-})
-
+// miContenedorController.save(newObj).then((data) =>{
+//     console.log(data);
+// }).catch((err) => {
+//     console.log('Error al guardar', err);
+// })
 
 // miContenedorController.getById('').then((data) =>{
 //     console.log('El producto segun el id entregado es: ', data);

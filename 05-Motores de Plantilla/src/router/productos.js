@@ -9,20 +9,6 @@ router.get('/', async (req, res) => {
     });
 });
 
-router.get('/:id', async (req, res) => {
-    // let valorID = req.params.id;
-    const { id } = req.params;
-    const resultado = await ContenedorController.getById(id);
-    if(!resultado)
-    return res.status(404).json({
-      msg:"Producto no encontrado"
-    })
-    res.json({
-      data: resultado,
-    });
-});
-
-
 // PARA GUARDAR NUEVO PRODUCTO
 router.post('/guardar', async (req, res) => {
   // const  title = req.body.title;
@@ -47,38 +33,5 @@ router.post('/guardar', async (req, res) => {
   res.redirect('/')
 });
 
-router.put('/:id', async (req, res) => {
-  const { id } = req.params;
-  const { title, price, thumnail } = req.body;
-  const resultado = await ContenedorController.getById(id);
-
-  if(!resultado)
-  return res.status(404).json({
-    msg:"Producto no encontrado"
-  });
-  if (!title || !price || !thumnail)
-  return res.status(400).json({
-    msg: 'Falta nombre, precio o link de imagen en el Body',
-  });
-
-  const newProduc = {
-    title,
-    price,
-    thumnail
-  };
-  const resultadoUpDate = await ContenedorController.upDate(id, newProduc);
-  res.json({
-    resultadoUpDate,
-  });
-});
-
-router.delete('/:id', async (req, res) => {
-  const { id } = req.params;
-  const resultadoDelete = await ContenedorController.deleteById(id);
-  res.json({
-    msg: 'Ok, producto eliminado',
-      resultadoDelete,
-  });
-});
 
 module.exports = router

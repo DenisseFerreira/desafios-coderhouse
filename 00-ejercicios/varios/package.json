@@ -1,0 +1,14 @@
+{
+  "name": "02-desafio-entregable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "contenedor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node idex.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

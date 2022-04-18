@@ -34,10 +34,10 @@ class Contenedor {
         const fileExists = fs.existsSync(this.archivo);
         if(fileExists){
             const data = this.readFile();
-            console.log(`Archivo ${this.archivo} existe, inicializo con el archivo`);
+            // console.log(`Archivo ${this.archivo} existe, inicializo con el archivo`);
             this.misObjetos = data.misObjetos;
         } else {
-            console.log('Archivo no existe. creando uno nuevo');
+            // console.log('Archivo no existe. creando uno nuevo');
             this.misObjetos= [];
             this.archivo = `./productos.txt`;
         }

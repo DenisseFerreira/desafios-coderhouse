@@ -34,10 +34,10 @@ class Contenedor {
         const fileExists = fs.existsSync(this.archivo);
         if(fileExists){
             const data = this.readFile();
-            console.log(`Archivo ${this.archivo} existe, inicializo con el archivo`);
+            console.log(`Archivo ${this.archivo} existe`);
             this.misObjetos = data.misObjetos;
         } else {
-            console.log('Archivo no existe. creando uno nuevo');
+            console.log(`Archivo ${this.archivo} no existe. creando uno nuevo`);
             this.misObjetos= [];
             this.archivo = `./productos.txt`;
         }
@@ -47,16 +47,19 @@ class Contenedor {
         const data = await this.readFileAsync();
 
         const p = {
-            id: uuidv4(),
-            title: newObj.title,
-            price: newObj.price,
-            thumnail: newObj.thumnail          
+            idProducto: uuidv4(),
+            // timestamp,
+            nombre: newObj.nombre,
+            descripcion: newObj.descripcion,
+            codigo: newObj.codigo,
+            foto: newObj.foto,
+            precio: newObj.precio, 
+            stock: newObj.stock       
         }
-
         data.misObjetos.push(p);
 
         this.writeFileAsync(data);
-        return `El id asignado es ${p.id}`;
+        return `El id asignado es ${p.idProducto}`;
     }
 
     async getById(id){
@@ -64,7 +67,7 @@ class Contenedor {
 
     for (let i = 0; i < data.misObjetos.length; i++) {
         const element = data.misObjetos[i];
-        if(element.id === id) return element;
+        if(element.idProducto === id) return element;
     }
     return null;
     }
@@ -76,9 +79,9 @@ class Contenedor {
 
     async deleteById(id){ //no debe retornar
         const data = await this.readFileAsync();
-        let conelID = data.misObjetos.filter((item) => item.id == id );
-        data.misObjetos = data.misObjetos.filter((item) => item.id !== id );
-        if(conelID[0].id === id){
+        let conelID = data.misObjetos.filter((item) => item.idProducto == id );
+        data.misObjetos = data.misObjetos.filter((item) => item.idProducto !== id );
+        if(conelID[0].idProducto === id){
             data.misObjetos;
             this.writeFileAsync(data);
             return conelID;
@@ -95,38 +98,41 @@ class Contenedor {
     }
 
     async upDate(id, nuevaData) {
-        // console.log('nuevaData', nuevaData);
         const data = await this.readFileAsync();
         const productos = data.misObjetos;
 
-        const indice = productos.findIndex((unProducto) => unProducto.id === id);
+        const indice = productos.findIndex((unProducto) => unProducto.idProducto === id);
         
         if (indice < 0) throw new Error('no existe el producto');
 
         const productUpdated = {
-            id,
+            
+            idProducto : id,
             ...nuevaData,
           };
         
         productos.splice(indice, 1, productUpdated);
         await this.writeFileAsync(data)
         return productUpdated;
-        // return data.misObjetos;
     }
 }
 
 const miContenedorController = new Contenedor();
 const newObj = {
-    title: 'Regla2',
-    price: 50,
-    thumnail:'httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo'
+    // timestamp,
+    nombre: 'Regla2',
+    descripcion: 'Regla de medir',
+    codigo: 3566,
+    foto: 'httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2Ah',
+    precio: 800, 
+    stock: 2 
 }
 
-miContenedorController.upDate('1cda4705-0578-4d2c-8f86-b5bcb309896b', newObj).then((data) =>{
-    // console.log('UPDATE', data);
-}).catch((err) => {
-    console.log('Error al guardar', err);
-})
+// miContenedorController.upDate('1cda4705-0578-4d2c-8f86-b5bcb309896b', newObj).then((data) =>{
+//     // console.log('UPDATE', data);
+// }).catch((err) => {
+//     console.log('Error al guardar', err);
+// })
 
 // miContenedorController.save(newObj).then((data) =>{
 //     console.log(data);

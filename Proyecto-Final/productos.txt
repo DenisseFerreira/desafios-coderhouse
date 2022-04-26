@@ -1,124 +1,193 @@
 {
 	"misObjetos": [
 		{
-			"id": "1",
-			"title": "Goma de borrar",
-			"price": 750,
-			"thumnail": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdnx.jumpseller.com%2Flibreria-odisea1%2Fimage%2F8855353%2Fresize%2F480%2F480%3F1643748442&imgrefurl=https%3A%2F%2Fwww.libreriaodisea.cl%2Fgoma-de-borrar-miga-mediana-adix&tbnid=FVMcUgxc4jfmaM&vet=12ahUKEwjDkN6_0dj2AhXpiZUCHec6BG4QMygJegUIARCQAg..i&docid=qs6CAwHo9wHfJM&w=480&h=480&q=goma%20de%20borrar&ved=2ahUKEwjDkN6_0dj2AhXpiZUCHec6BG4QMygJegUIARCQAg"
+			"idProducto": "1",
+			"nombre": "Goma de borrar",
+			"precio": 750,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdnx.jumpseller.com%2Flibreria-odisea1%2Fimage%2F8855353%2Fresize%2F480%2F480%3F1643748442&imgrefurl=https%3A%2F%2Fwww.libreriaodisea.cl%2Fgoma-de-borrar-miga-mediana-adix&tbnid=FVMcUgxc4jfmaM&vet=12ahUKEwjDkN6_0dj2AhXpiZUCHec6BG4QMygJegUIARCQAg..i&docid=qs6CAwHo9wHfJM&w=480&h=480&q=goma%20de%20borrar&ved=2ahUKEwjDkN6_0dj2AhXpiZUCHec6BG4QMygJegUIARCQAg"
 		},
 		{
-			"id": "96149d68-474c-440b-ad46-d41df917245c",
-			"title": "Pegamento en barra",
-			"price": 1500,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwiUr53H0Nj2AhUJCZEKHXLaB5QYABADGgJjZQ&sig=AOD64_05YBKFS-wbU-W33D_TY1quoTPG7w&adurl&ctype=5&ved=2ahUKEwjzlo7H0Nj2AhV0iJUCHcMxCO4Qwg96BAgBEGk"
+			"idProducto": "96149d68-474c-440b-ad46-d41df917245c",
+			"nombre": "Pegamento en barra",
+			"precio": 1500,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwiUr53H0Nj2AhUJCZEKHXLaB5QYABADGgJjZQ&sig=AOD64_05YBKFS-wbU-W33D_TY1quoTPG7w&adurl&ctype=5&ved=2ahUKEwjzlo7H0Nj2AhV0iJUCHcMxCO4Qwg96BAgBEGk"
 		},
 		{
-			"id": "36beac85-d008-4d3b-a747-35ac2b5d0be8",
-			"title": "Cuaderno",
-			"price": 2000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwjDn_DT0Nj2AhUICZEKHb_nArkYABABGgJjZQ&sig=AOD64_3_oDlxP2hVYQq3V0wb8JGMdjl64A&adurl&ctype=5&ved=2ahUKEwjz-d_T0Nj2AhW4q5UCHfFyCC4Qwg96BAgBEGM"
+			"idProducto": "36beac85-d008-4d3b-a747-35ac2b5d0be8",
+			"nombre": "Cuaderno",
+			"precio": 2000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwjDn_DT0Nj2AhUICZEKHb_nArkYABABGgJjZQ&sig=AOD64_3_oDlxP2hVYQq3V0wb8JGMdjl64A&adurl&ctype=5&ved=2ahUKEwjz-d_T0Nj2AhW4q5UCHfFyCC4Qwg96BAgBEGM"
 		},
 		{
-			"id": "49034a20-1ada-40e8-aeeb-6c232763c331",
-			"title": "Cartulina en block",
-			"price": 5000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwiW98jg0dj2AhXQE9QBHfeXA6IYABAFGgJvYQ&sig=AOD64_2bOdXgg9MpdYuXy6LibEKa1mVCpw&adurl&ctype=5&ved=2ahUKEwiSl7fg0dj2AhXHrpUCHcNQA4cQwg96BAgBEFI"
+			"idProducto": "49034a20-1ada-40e8-aeeb-6c232763c331",
+			"nombre": "Cartulina en block",
+			"precio": 5000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwiW98jg0dj2AhXQE9QBHfeXA6IYABAFGgJvYQ&sig=AOD64_2bOdXgg9MpdYuXy6LibEKa1mVCpw&adurl&ctype=5&ved=2ahUKEwiSl7fg0dj2AhXHrpUCHcNQA4cQwg96BAgBEFI"
 		},
 		{
-			"id": "ab899793-8905-4119-97b6-42bca784b78b",
-			"title": "Carpeta",
-			"price": 2000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwiIy_iA0dj2AhVLBZEKHQrfBK4YABABGgJjZQ&sig=AOD64_2-Si5XzOmbUkn_E3LRmGbSezLcFg&adurl&ctype=5&ved=2ahUKEwiZiOqA0dj2AhVCjZUCHaM1AAAQvhd6BAgBEGU"
+			"idProducto": "ab899793-8905-4119-97b6-42bca784b78b",
+			"nombre": "Carpeta",
+			"precio": 2000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwiIy_iA0dj2AhVLBZEKHQrfBK4YABABGgJjZQ&sig=AOD64_2-Si5XzOmbUkn_E3LRmGbSezLcFg&adurl&ctype=5&ved=2ahUKEwiZiOqA0dj2AhVCjZUCHaM1AAAQvhd6BAgBEGU"
 		},
 		{
-			"id": "bb43cd6c-f8db-437e-a776-597961e411d4",
-			"title": "Estuche",
-			"price": 7000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwjkt_qM0dj2AhWWCpEKHRorB0IYABAHGgJjZQ&sig=AOD64_1wEQmOZUj9pEiJQYz_ZI02Sh24tw&adurl&ctype=5&ved=2ahUKEwjot-uM0dj2AhW0n5UCHeHOBx4Qvhd6BAgBEHU"
+			"idProducto": "bb43cd6c-f8db-437e-a776-597961e411d4",
+			"nombre": "Estuche",
+			"precio": 7000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwjkt_qM0dj2AhWWCpEKHRorB0IYABAHGgJjZQ&sig=AOD64_1wEQmOZUj9pEiJQYz_ZI02Sh24tw&adurl&ctype=5&ved=2ahUKEwjot-uM0dj2AhW0n5UCHeHOBx4Qvhd6BAgBEHU"
 		},
 		{
-			"id": "b7cb6dc7-d0c4-4f14-b4ad-4dc0025f37ad",
-			"title": "Regla",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "b7cb6dc7-d0c4-4f14-b4ad-4dc0025f37ad",
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "a96c5780-689e-4a2a-88be-5c66ef53c418",
-			"title": "Linterna",
-			"price": 3000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "a96c5780-689e-4a2a-88be-5c66ef53c418",
+			"nombre": "Linterna",
+			"precio": 3000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "57b1dbd5-26b2-4ed0-92f8-d4fc4272dae5",
-			"title": "Regla",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "57b1dbd5-26b2-4ed0-92f8-d4fc4272dae5",
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "8ae21e97-cb88-40e4-aad1-8565b1cbf722",
-			"title": "Linterna",
-			"price": 3000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "8ae21e97-cb88-40e4-aad1-8565b1cbf722",
+			"nombre": "Linterna",
+			"precio": 3000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "bbf91371-51a4-418e-8298-fd208138299d",
-			"title": "Regla",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "bbf91371-51a4-418e-8298-fd208138299d",
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "6c56407c-50b7-45ee-9be2-52df2a38f26c",
-			"title": "Regla",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "6c56407c-50b7-45ee-9be2-52df2a38f26c",
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "54212147-a490-4c63-9ab8-973190d6b9db",
-			"title": "Regla",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "54212147-a490-4c63-9ab8-973190d6b9db",
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "959f0fd3-0cf1-4eeb-aeca-ffb5666a1805",
-			"title": "Regla",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "959f0fd3-0cf1-4eeb-aeca-ffb5666a1805",
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "a86a17d1-1c0a-49c3-8782-832113485103",
-			"title": "Regla",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "a86a17d1-1c0a-49c3-8782-832113485103",
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "ce55a962-0b8c-417a-9280-571aab75cb66",
-			"title": "Regla",
-			"price": 1000,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "ce55a962-0b8c-417a-9280-571aab75cb66",
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
 		},
 		{
-			"id": "8792999d-4995-439d-a8e6-f5df96e70f8d",
-			"title": "Pega",
-			"price": 1050,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai"
+			"idProducto": "8792999d-4995-439d-a8e6-f5df96e70f8d",
+			"nombre": "Pega",
+			"precio": 1050,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai"
 		},
 		{
-			"id": "1cda4705-0578-4d2c-8f86-b5bcb309896b",
-			"title": "Regla2",
-			"price": 50,
-			"thumnail": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo"
+			"idProducto": "1cda4705-0578-4d2c-8f86-b5bcb309896b",
+			"nombre": "Regla2",
+			"descripcion": "Regla de medir",
+			"codigo": 3566,
+			"stock": 3,
+			"foto": "httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2Ah",
+			"precio": 800
 		},
 		{
-			"id": "f451cca7-7a74-4e54-a3e3-55f3879083fc",
-			"title": "Pegatinas",
-			"price": 1050,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai"
+			"idProducto": "f451cca7-7a74-4e54-a3e3-55f3879083fc",
+			"nombre": "Pegatinas",
+			"precio": 1050,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai"
 		},
 		{
-			"id": "79ad51b6-6e51-4c93-8d1d-f461e75c4403",
-			"title": "Pegatinas",
-			"price": 1050,
-			"thumnail": "https://www.google.com/aclk?sa=l&ai"
+			"idProducto": "79ad51b6-6e51-4c93-8d1d-f461e75c4403",
+			"nombre": "Brillantina",
+			"descripcion": "Para decorar",
+			"codigo": 3050,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai",
+			"precio": 1250
+		},
+		{
+			"idProducto": "0041a615-7a80-47be-8418-f6c90b48b70f",
+			"nombre": "Brillantinaz",
+			"descripcion": "Para decorar",
+			"codigo": 3050,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai",
+			"precio": 1250
 		}
 	],
 	"archivo": "./productos.txt"

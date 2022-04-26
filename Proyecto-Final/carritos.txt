@@ -1,0 +1,42 @@
+{
+	"carritos": [
+		{
+			"idCarrito": "bd6f17e3-fd8f-4ba5-aa7e-a7f524cd05de",
+			"productos": [
+				{
+					"idProducto": "57b1dbd5-26b2-4ed0-92f8-d4fc4272dae5",
+					"cantidad": 10
+				},
+				{
+					"idProducto": "0041a615-7a80-47be-8418-f6c90b48b70f",
+					"cantidad": 10
+				},
+				{
+					"idProducto": "0041a615-7a80-47be-8418-f6c90b48b70f",
+					"cantidad": 10
+				},
+				{
+					"idProducto": "0041a615-7a80-47be-8418-f6c90b48b70f",
+					"cantidad": 10
+				},
+				{
+					"idProducto": "0041a615-7a80-47be-8418-f6c90b48b70f",
+					"cantidad": 10
+				},
+				{
+					"idProducto": "0041a615-7a80-47be-8418-f6c90b48b70f",
+					"cantidad": 20
+				}
+			]
+		},
+		{
+			"idCarrito": "c9cae400-f41d-417b-b0b9-4f3f7529f817",
+			"productos": []
+		},
+		{
+			"idCarrito": "f0d5b755-5df5-4975-bac1-8259e24e2615",
+			"productos": []
+		}
+	],
+	"archivoCarritos": "./carritos.txt"
+}

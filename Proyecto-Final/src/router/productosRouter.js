@@ -1,5 +1,5 @@
 const express = require('express');
-const {ContenedorController} = require ('../controller/contenedor');
+const {ContenedorController} = require ('../controller/productosController');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-    // let valorID = req.params.id;
     const { id } = req.params;
     const resultado = await ContenedorController.getById(id);
     if(!resultado)
@@ -24,18 +23,21 @@ router.get('/:id', async (req, res) => {
 
 
 router.post('/', async (req, res) => {
-  // const  title = req.body.title;
-  const { title, price, thumnail } = req.body;  //desestructuracion (sino hay que hacer uno por uno)
+  // const  nombre = req.body.nombre;
+  const { nombre, descripcion, codigo, foto, precio, stock } = req.body;  //desestructuracion (sino hay que hacer uno por uno)
 
-  if (!title || !price || !thumnail)
+  if (!nombre || !descripcion || !codigo || !foto || !precio || !stock)
   return res.status(400).json({
     msg: 'Falta nombre, precio o link de imagen en el Body',
   });
 
   const newProduc = {
-    title,
-    price,
-    thumnail
+    nombre,
+    descripcion,
+    codigo,
+    foto, 
+    precio, 
+    stock
   };
 
   const resultado = await ContenedorController.save(newProduc);
@@ -47,22 +49,25 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
-  const { title, price, thumnail } = req.body;
+  const { nombre, descripcion, codigo, foto, precio, stock } = req.body;
   const resultado = await ContenedorController.getById(id);
 
   if(!resultado)
   return res.status(404).json({
     msg:"Producto no encontrado"
   });
-  if (!title || !price || !thumnail)
+  if (!nombre || !descripcion || !codigo || !foto || !precio || !stock)
   return res.status(400).json({
     msg: 'Falta nombre, precio o link de imagen en el Body',
   });
 
   const newProduc = {
-    title,
-    price,
-    thumnail
+    nombre,
+    descripcion,
+    codigo, 
+    foto, 
+    precio, 
+    stock
   };
   const resultadoUpDate = await ContenedorController.upDate(id, newProduc);
   res.json({

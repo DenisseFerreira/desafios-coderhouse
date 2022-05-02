@@ -25,7 +25,7 @@ router.get('/:id/productos', async (req, res) => {
   const { id } = req.params;
   const resultado = await CarritoController.getAllProductosCarrito(id);
   res.json({
-    msg: 'Lista de carrito y sus productos',
+    msg: 'El carrito y todos sus productos',
     resultado,
   });
 });
@@ -39,6 +39,7 @@ router.post('/:id/productos', async (req, res) => {
   const carritoProducto = {
     idCarrito : id,
     idProducto: idProducto,
+    fecha: Date.now(),
     cantidad: cantidad
   };
 
@@ -50,20 +51,17 @@ router.post('/:id/productos', async (req, res) => {
   });
 });
 
+router.delete('/:id/productos/:id_prod', async (req, res) => {
+  const { id, id_prod } = req.params;
+  const resultadoDelete = await CarritoController.deleteByIdProducto(id, id_prod);
+  res.json({
+    msg: 'Ok, producto eliminado',
+      resultadoDelete,
+  });
+});
+
 
 module.exports = router
 
 
-    // const newCarrito = {
-    //   idCarrito,
-    //   producto :{
-    //       dateProducto,
-    //       name,
-    //       description,
-    //       codigo,
-    //       thumnail,
-    //       price, 
-    //       cantidad
-    //   }
-    // };
   

@@ -176,18 +176,9 @@
 			"nombre": "Brillantina",
 			"descripcion": "Para decorar",
 			"codigo": 3050,
-			"stock": 3,
 			"foto": "https://www.google.com/aclk?sa=l&ai",
-			"precio": 1250
-		},
-		{
-			"idProducto": "0041a615-7a80-47be-8418-f6c90b48b70f",
-			"nombre": "Brillantinaz",
-			"descripcion": "Para decorar",
-			"codigo": 3050,
-			"stock": 3,
-			"foto": "https://www.google.com/aclk?sa=l&ai",
-			"precio": 1250
+			"precio": 1250,
+			"stock": 8
 		}
 	],
 	"archivo": "./productos.txt"

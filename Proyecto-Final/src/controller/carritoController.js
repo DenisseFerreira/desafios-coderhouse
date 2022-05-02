@@ -47,6 +47,7 @@ class Carrito {
 
         const carrito = {
             idCarrito: uuidv4(),
+            fecha: Date.now(),
             productos:[]
         }
 
@@ -69,35 +70,29 @@ class Carrito {
     }
 
     async getAllProductosCarrito(id){
-
         const data = await this.readFileAsync();
-        // return data.carrito;
         const totalCarritos = data.carritos;
-        let newCarrito;
-        // let carritoParaMostrar = data.misObjetos.filter((item) => item.idProducto == id );
-        for (let i = 0; i < totalCarritos.length; i++) {
-            const element = totalCarritos[i];
-            if(element.idCarrito === id) 
-            newCarrito = element;
+        let oneCarrito;
+        let detailProductos;
+    
+        for (let i = 0; i < totalCarritos.length; i++) { // Recorrer el array y encontrar el idCarrito
+            const element = totalCarritos[i]; //recorre y muestra todos los carritos
+            if(element.idCarrito === id)  //ingresa a cada carrito y compara su id
+            oneCarrito = element;  //el elemento completo, carrito con TODOS sus productos
         }
-        for(let i = 0; i < newCarrito.productos.length; i++){
-           // leer detalles del producto
-        let buscaProducto = await ContenedorController.getById(newCarrito.productos[i].idProducto);
-              console.log('buscaProducto', buscaProducto);
-
-            return newCarrito.productos[i] = buscaProducto;
-           // agregar al productos de salida en new carrito
-           
-        //    newCarrito.productos[i].nombre =  buscaProducto.nombre;
-        //    newCarrito.productos[i].descripcion =  buscaProducto.descripcion;
-        //    newCarrito.productos[i].codigo =  buscaProducto.codigo;
-        //    newCarrito.productos[i].foto =  buscaProducto.foto;
-        //    newCarrito.productos[i].precio =  buscaProducto.precio;
-        //    newCarrito.productos[i].thumnail = buscaProducto.thumnail;
-        //    newCarrito.productos[i].stock = buscaProducto.stock;
-
+        // console.log('PRIMER for',oneCarrito);
+        for(let i = 0; i < oneCarrito.productos.length; i++){ // Recorrer y mostrar los productos que hay en el carrito 
+           // Detalles del producto
+        detailProductos = await ContenedorController.getById(oneCarrito.productos[i].idProducto);
+           oneCarrito.productos[i].nombre =  detailProductos.nombre;
+           oneCarrito.productos[i].descripcion =  detailProductos.descripcion;
+           oneCarrito.productos[i].codigo =  detailProductos.codigo;
+           oneCarrito.productos[i].foto =  detailProductos.foto;
+           oneCarrito.productos[i].precio =  detailProductos.precio;
+           oneCarrito.productos[i].stock = detailProductos.stock;
         }
-        return newCarrito;
+        console.log('AFUERA DEL for', oneCarrito);
+        return oneCarrito;
     }
 
     async save( id, carritoProducto){
@@ -108,40 +103,27 @@ class Carrito {
             if(element.idCarrito === id) 
             newCarrito = element;
         }
-        console.log(newCarrito);
-         newCarrito.productos.push({"idProducto":carritoProducto.idProducto, "cantidad": carritoProducto.cantidad});
+        // console.log(newCarrito);
+         newCarrito.productos.push({"idProducto":carritoProducto.idProducto, "cantidad": carritoProducto.cantidad, "fecha": carritoProducto.fecha});
         await this.writeFileAsync(data);
+    }
+
+    async deleteByIdProducto(id_carrito, id_producto){ //Elimina producto dentro del carrito
+        const data = await this.readFileAsync();
+        data.carritos.forEach(cadaCarrito => {
+            if(cadaCarrito.idCarrito === id_carrito) {
+                cadaCarrito.productos = cadaCarrito.productos.filter(cadaProducto =>  cadaProducto.idProducto != id_producto )
+            }
+        });
+        // console.log(data);
+        this.writeFileAsync(data);
     }
 
 
 }
 
 const carritoController = new Carrito();
-// const newCarrito = {
-//     title: 'Regla2',
-//     price: 50,
-//     thumnail:'httpsdddd://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhUWCJEKHYZGBdEYABAJGgJjZQ&sig=AOD64_0Vxc6DuYJbci5Q5RSdpQ2O_3ZL5g&adurl&ctype=5&ved=2ahUKEwiemZHxz9j2AhWGSbgEHWyaD1wQvhd6BAgBEHo'
-// }
-
-// carritoController.save(newCarrito).then((data) =>{
-//     console.log(data);
-// }).catch((err) => {
-//     console.log('Error al guardar', err);
-// })
-
 
 module.exports = {
     CarritoController: carritoController,
 }
-
-
-// "dateCarrito": "fecha Carrito",
-// "producto" :{
-//     "dateProducto": "fecha producto",
-//     "name": "Goma de borrar",
-//     "description": "Producto para borrar",
-//     "codigo": 5678,
-//     "thumnail": "https://www.google.com/aclk?sa=l&ai",
-//     "price": 600, 
-//     "stock": 4
-// }

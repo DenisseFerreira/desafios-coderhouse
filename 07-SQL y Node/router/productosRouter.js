@@ -1,5 +1,5 @@
 const express = require('express');
-const {ContenedorController} = require ('../controller/productosController');
+const {ContenedorController} = require ('../src/productosController');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
@@ -23,12 +23,10 @@ router.get('/:id', async (req, res) => {
 
 
 router.post('/', async (req, res) => {
-  // const  nombre = req.body.nombre;
-  const { nombre, descripcion, codigo, foto, precio, stock } = req.body;  //desestructuracion (sino hay que hacer uno por uno)
-
+  const { nombre, descripcion, codigo, foto, precio, stock } = req.body;
   if (!nombre || !descripcion || !codigo || !foto || !precio || !stock)
   return res.status(400).json({
-    msg: 'Falta nombre, precio o link de imagen en el Body',
+    msg: 'Falta información en el Body',
   });
 
   const newProduc = {
@@ -43,7 +41,8 @@ router.post('/', async (req, res) => {
   const resultado = await ContenedorController.save(newProduc);
 
   res.json({
-    msg: 'Se agregó un prodcuto nuevo al contenedor',
+    msg: 'Se agregó un producto nuevo al contenedor',
+    resultado
   });
 });
 
@@ -58,7 +57,7 @@ router.put('/:id', async (req, res) => {
   });
   if (!nombre || !descripcion || !codigo || !foto || !precio || !stock)
   return res.status(400).json({
-    msg: 'Falta nombre, precio o link de imagen en el Body',
+    msg: 'Falta información el Body',
   });
 
   const newProduc = {

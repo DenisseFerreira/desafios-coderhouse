@@ -1,0 +1,164 @@
+use ecommerce
+show dbs
+db
+
+db.createCollection("productos")
+db.createCollection("mensajes")
+show collections
+
+const products =  [
+		{
+			"nombre": "Goma de borrar",
+			"precio": 750,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/imgres?imgurl=https"
+		},
+		{
+			"nombre": "Pegamento en barra",
+			"precio": 1500,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?"
+		},
+		{
+			"nombre": "Cuaderno",
+			"precio": 2000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai"
+		},
+		{
+			"nombre": "Cartulina en block",
+			"precio": 5000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=D"
+		},
+		{
+			"nombre": "Carpeta",
+			"precio": 2000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=D"
+		},
+		{
+			"nombre": "Estuche",
+			"precio": 3000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=lEiJQYz_ZI0jU"
+		},
+		{
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwYJbci5Q5RSdpQ2"
+		},
+		{
+			"nombre": "Linterna",
+			"precio": 3000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9K"
+		},
+		{
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=wQBEHo"
+		},
+		{
+			"nombre": "Linterna",
+			"precio": 3000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=ved=2ahUKEwiemHo"
+		},
+		{
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEpe=5&EHo"
+		},
+		{
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9OD64_0Vxc6DuYJbc"
+		},
+		{
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChc_0Vxc6DuYEHWyBAgBEHo"
+		},
+		{
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwiQ&sil&ct2BAgBEHo"
+		},
+		{
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhD64_0VxBEHo"
+		},
+		{
+			"nombre": "Regla",
+			"precio": 1000,
+			"descripcion": "Para uso escolar",
+			"codigo": 5690,
+			"stock": 3,
+			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz5hd6BAgBEHo"
+		}
+]
+db.productos.insert(products);
+db.productos.find().pretty()
+const mensajes = [
+  { emisor: "elizabeth@gmail".com, 
+    mensaje: "hola!!" },
+  { emisor: "sofia@gmail.com", 
+    mensaje: "hola, como estas?" },
+  { emisor: "elizabeth@gmail.com", 
+    mensaje: "bien y tu?" },
+  { emisor: "sofia@gmail.com", 
+    mensaje: "bien, dime en que te ayudo"},
+  { emisor: "elizabeth@gmail.com", 
+    mensaje: "te queda de este producto¿?"},
+  { emisor: "sofia@gmail.com", 
+    mensaje: "si, tenemos los ultimos"},
+  { emisor: "elizabeth@gmail.com",
+    mensaje: "y tienes despacho?"},
+  { emisor: "sofia@gmail.com", 
+    mensaje: "si, con cobro adicional" },
+  { emisor: "elizabeth@gmail.com",
+     mensaje: "perfecto" },
+  { emisor: "sofia@gmail.com", 
+    mensaje: "cualquie duda me comentas"},
+]
+
+db.mensajes.insert(mensajes);

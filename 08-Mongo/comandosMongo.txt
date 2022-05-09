@@ -136,8 +136,8 @@ const products =  [
 			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz5hd6BAgBEHo"
 		}
 ]
-db.productos.insert(products);
-db.productos.find().pretty()
+db.productos.insert(products)
+db.productos.find().pretty() //Para listar
 const mensajes = [
   { emisor: "elizabeth@gmail".com, 
     mensaje: "hola!!" },
@@ -161,4 +161,38 @@ const mensajes = [
     mensaje: "cualquie duda me comentas"},
 ]
 
-db.mensajes.insert(mensajes);
+db.mensajes.insert(mensajes)
+db.mensajes.find().pretty() //Para listar
+
+// Para contar sin hacer query
+db.productos.estimatedDocumentCount()
+db.mensajes.estimatedDocumentCount()
+
+// Para contar con query
+db.mensajes.find().count()
+db.productos.find().count()
+
+
+// CRUD
+
+db.productos.insert({
+			"nombre": "Brillantina",
+			"descripcion": "Para decorar",
+			"codigo": 3050,
+			"foto": "https://www.google.com/aclk?sa=l&ai",
+			"precio": 1250,
+			"stock": 8
+		})
+
+
+/* $gt mayor
+$gte mayor igual
+$lt menor
+$lte menor igual */
+
+db.productos.find({precio: {$lt: 1000}})
+db.productos.find({precio: {$gte: 1000}, precio: {$lte: 3000}}).pretty()
+db.productos.find({precio: {$gt: 3000}})
+
+/* $in incluye
+$nin no incluye*/

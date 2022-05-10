@@ -9,7 +9,7 @@ show collections
 const products =  [
 		{
 			"nombre": "Goma de borrar",
-			"precio": 750,
+			"precio": 100,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
@@ -17,7 +17,7 @@ const products =  [
 		},
 		{
 			"nombre": "Pegamento en barra",
-			"precio": 1500,
+			"precio": 750,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
@@ -25,7 +25,7 @@ const products =  [
 		},
 		{
 			"nombre": "Cuaderno",
-			"precio": 2000,
+			"precio": 1800,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
@@ -33,7 +33,7 @@ const products =  [
 		},
 		{
 			"nombre": "Cartulina en block",
-			"precio": 5000,
+			"precio": 4000,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
@@ -41,7 +41,7 @@ const products =  [
 		},
 		{
 			"nombre": "Carpeta",
-			"precio": 2000,
+			"precio": 2500,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
@@ -49,7 +49,7 @@ const products =  [
 		},
 		{
 			"nombre": "Estuche",
-			"precio": 3000,
+			"precio": 5000,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
@@ -57,7 +57,7 @@ const products =  [
 		},
 		{
 			"nombre": "Regla",
-			"precio": 1000,
+			"precio": 3500,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
@@ -65,7 +65,7 @@ const products =  [
 		},
 		{
 			"nombre": "Linterna",
-			"precio": 3000,
+			"precio": 4200,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
@@ -73,7 +73,7 @@ const products =  [
 		},
 		{
 			"nombre": "Regla",
-			"precio": 1000,
+			"precio": 500,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
@@ -81,63 +81,14 @@ const products =  [
 		},
 		{
 			"nombre": "Linterna",
-			"precio": 3000,
+			"precio": 4800,
 			"descripcion": "Para uso escolar",
 			"codigo": 5690,
 			"stock": 3,
 			"foto": "https://www.google.com/aclk?sa=ved=2ahUKEwiemHo"
-		},
-		{
-			"nombre": "Regla",
-			"precio": 1000,
-			"descripcion": "Para uso escolar",
-			"codigo": 5690,
-			"stock": 3,
-			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEpe=5&EHo"
-		},
-		{
-			"nombre": "Regla",
-			"precio": 1000,
-			"descripcion": "Para uso escolar",
-			"codigo": 5690,
-			"stock": 3,
-			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9OD64_0Vxc6DuYJbc"
-		},
-		{
-			"nombre": "Regla",
-			"precio": 1000,
-			"descripcion": "Para uso escolar",
-			"codigo": 5690,
-			"stock": 3,
-			"foto": "https://www.google.com/aclk?sa=l&ai=DChc_0Vxc6DuYEHWyBAgBEHo"
-		},
-		{
-			"nombre": "Regla",
-			"precio": 1000,
-			"descripcion": "Para uso escolar",
-			"codigo": 5690,
-			"stock": 3,
-			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwiQ&sil&ct2BAgBEHo"
-		},
-		{
-			"nombre": "Regla",
-			"precio": 1000,
-			"descripcion": "Para uso escolar",
-			"codigo": 5690,
-			"stock": 3,
-			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz9j2AhD64_0VxBEHo"
-		},
-		{
-			"nombre": "Regla",
-			"precio": 1000,
-			"descripcion": "Para uso escolar",
-			"codigo": 5690,
-			"stock": 3,
-			"foto": "https://www.google.com/aclk?sa=l&ai=DChcSEwie9Kjxz5hd6BAgBEHo"
 		}
 ]
-db.productos.insert(products)
-db.productos.find().pretty() //Para listar
+
 const mensajes = [
   { emisor: "elizabeth@gmail".com, 
     mensaje: "hola!!" },
@@ -161,9 +112,16 @@ const mensajes = [
     mensaje: "cualquie duda me comentas"},
 ]
 
+//Agregar 10 documentos con valores distintos a las colecciones mensajes y productos.
+db.productos.insert(products)
 db.mensajes.insert(mensajes)
-db.mensajes.find().pretty() //Para listar
 
+//Listar todos los documentos en cada colección.
+db.productos.find().pretty() 
+db.mensajes.find().pretty() 
+
+
+//Mostrar la cantidad de documentos almacenados en cada una de ellas.
 // Para contar sin hacer query
 db.productos.estimatedDocumentCount()
 db.mensajes.estimatedDocumentCount()
@@ -190,9 +148,19 @@ $gte mayor igual
 $lt menor
 $lte menor igual */
 
-db.productos.find({precio: {$lt: 1000}})
-db.productos.find({precio: {$gte: 1000}, precio: {$lte: 3000}}).pretty()
-db.productos.find({precio: {$gt: 3000}})
+db.productos.find({precio: {$lt: 1000}}).pretty()
+db.productos.find({$and:[{precio: {$gt: 1000}},  { precio: {$lt: 3000}}]}).pretty()
+db.productos.find({precio: {$gt: 3000}}).pretty()
 
 /* $in incluye
 $nin no incluye*/
+//Realizar una consulta que traiga sólo el nombre del tercer producto más barato. Anidando.
+db.productos.find().sort({precio: 1}).skip(2).limit(1).pretty()
+
+db.productos.updateMany({},{$set:{stock:100}})
+db.productos.updateMany({precio: {$gt: 4000}},{$set: {stock: 0}})
+db.productos.deleteMany({price: {$lt:1000}})
+
+
+
+ 

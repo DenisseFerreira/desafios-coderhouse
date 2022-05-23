@@ -1,15 +1,31 @@
 const express = require('express');
 const mainRouter = require('./router');
 const app = express();
+const mongoose = require('mongoose');
 app.use(express.static('public'));
-const port = 8080;
-const server = app.listen(port, () =>
-  console.log('Servidor escuchando en el puerto', port)
-);
 
-server.on('error', (err) => {
-  console.log('ERROR', err);
-});
+
+const connectionString = 'mongodb+srv://dFerreiraAdmin:16Julio2012@cluster0.cifal.mongodb.net/?retryWrites=true&w=majority'
+const initMongoDB = async () => {
+  try {
+    console.log('CONECTANDO A MI DB', connectionString)
+    await mongoose.connect(connectionString);
+  } catch (error) {
+    console.log(`ERROR => ${error}`);
+    return error;
+  }
+};
+
+
+const init = async () => {
+  await initMongoDB();
+  const port = 8080;
+  const server = app.listen(port, () =>
+    console.log('Servidor escuchando en el puerto', port)
+  );
+};
+
+init();
 
 app.use(express.json());
 

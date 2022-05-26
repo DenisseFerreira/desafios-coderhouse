@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const carritoCollectionName = 'carrito';
+export const carritoCollectionName = 'carrito';
 
 const carritoSchema = new mongoose.Schema(
   {
@@ -10,12 +10,9 @@ const carritoSchema = new mongoose.Schema(
   { timestamps: true, versionKey: false }
 );
 
-const CarritoModel = mongoose.model(
+export const CarritoModel = mongoose.model(
   carritoCollectionName,
   carritoSchema
 );
 
 
-
-module.exports = carritoCollectionName;
-module.exports = CarritoModel;

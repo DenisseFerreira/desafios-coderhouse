@@ -1,10 +1,9 @@
 import { ProductosModel } from '../models/productos';
-import { CarritoModel } from '../models/carritos';
 
 export const getAllProducts = async (req, res) => {
     const q1 = await ProductosModel.find();
     res.json({
-        data: q1,
+        Productos: q1,
       });
 };
 
@@ -16,11 +15,8 @@ export const getProductById = async (req, res) => {
       });
 };
 
-//problemas con el carritoID
 export const createProduct = async (req, res) => {
-
-    console.log('req.body', req.body);
-    const { nombre, precio, descripcion, codigo, stock, foto, carritoId } = req.body;
+    const { nombre, precio, descripcion, codigo, stock, foto } = req.body;
     
     const newProduct  = await ProductosModel.create({
         nombre,
@@ -28,29 +24,42 @@ export const createProduct = async (req, res) => {
         codigo,
         foto, 
         precio, 
-        stock,
-        carritoId
+        stock
       });
 
       res.json({
-        data: newProduct,
+        NewProducto: newProduct,
       });
 };
 
 export const deleteProduct = async (req, res) => {
-    try {
-      const { id } = req.params;
-  
-      await ProductosModel.findByIdAndDelete(id);
-  
-      res.json({
-        msg: 'Producto eliminado',
-      });
-    } catch (err) {
-      res.status(500).json({
-        error: err.message,
-        stack: err.stack,
-      });
-    }
+  const { id } = req.params;
+  await ProductosModel.findByIdAndDelete(id);
+
+  res.json({
+    msg: 'Producto eliminado',
+  });
 };
+
+export const updateProduct = async (req,res)=>  {
+  const { id } = req.params;
+  const { nombre, precio, descripcion, codigo, stock, foto } = req.body;
+  const newProduc = {
+    nombre,
+    descripcion,
+    codigo, 
+    foto, 
+    precio, 
+    stock
+  };
+
+  const resultadoUpDate = await ProductosModel.findByIdAndUpdate(
+    { _id: id },
+   newProduc
+  );
+ 
+  res.json({
+    resultadoUpDate,
+  });
+}
 

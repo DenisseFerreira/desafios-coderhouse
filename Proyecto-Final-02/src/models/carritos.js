@@ -4,8 +4,10 @@ export const carritoCollectionName = 'carrito';
 
 const carritoSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
-    description: { type: String, required: true },
+    productos: { 
+      type: Array, required: true,
+      // cantidad: { type: Number, required: true }
+    }
   },
   { timestamps: true, versionKey: false }
 );

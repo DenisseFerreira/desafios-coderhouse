@@ -1,4 +1,0 @@
-{
-	"carritos": [],
-	"archivoCarritos": "./carritos.txt"
-}

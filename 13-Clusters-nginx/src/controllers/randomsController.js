@@ -1,19 +1,9 @@
-export const numberRandoms =  (c) => {
-    // console.log('en random');
-    const salida = [];
-    for (let i = 0; i < cantidad; i++) {
-        salida.push(Math.random())
-    }
-
+let numeros = 0;
+export const numberRandoms =  async (res, req) => {
+    numeros += 1;
+    console.log('Contador de visitas al sitio', numeros);
     res.json({
-        msg:"ok"
-    })
+      msg: 'Contando visitas',
+      numeros,
+    });
 }
-
-process.on('message', (cantidad) => {
-    if (!cantidad)
-      numberRandoms();
-    else
-    numberRandoms(cantidad)
-    
-  });

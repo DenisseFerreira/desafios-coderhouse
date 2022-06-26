@@ -1,0 +1,35 @@
+{
+  "name": "12-process",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist",
+    "start": "node ./dist/index.js",
+    "prod:fork": "npm run build && pm2 start dist/index.js --watch --name=VersionFork",
+    "prod:cluster": "npm run build && pm2 start dist/index.js --watch -i max --name=VersionCluster",
+    "prod:forever": "npm run build && forever start dist/index.js",
+    "stop:forever": "forever stopall",
+    "stop:pm2": "pm2 stop all",
+    "delete:pm2": "pm2 detele all",
+    "dev": "nodemon --exec babel-node ./src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "minimist": "^1.2.6",
+    "forever": "^4.0.1",
+    "pm2": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
+    "nodemon": "^2.0.16"
+  }
+}

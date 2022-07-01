@@ -1,0 +1,8 @@
+[2022-06-30T22:04:30.769] [INFO] default - Imprimimos Info
+[2022-06-30T22:04:30.770] [WARN] default - Imprimimos Warn
+[2022-06-30T22:04:30.770] [ERROR] default - Imprimimos Error
+[2022-06-30T22:04:30.771] [FATAL] default - Imprimimos Fatal
+[2022-06-30T22:15:47.253] [INFO] default - Imprimimos Info
+[2022-06-30T22:15:47.255] [WARN] default - Imprimimos Warn
+[2022-06-30T22:15:47.255] [ERROR] default - Imprimimos Error
+[2022-06-30T22:15:47.256] [FATAL] default - Imprimimos Fatal

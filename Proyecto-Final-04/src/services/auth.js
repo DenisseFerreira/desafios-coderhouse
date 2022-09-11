@@ -1,59 +1,41 @@
-import passport from 'passport';
-import { Strategy as LocalStrategy } from 'passport-local';
+// import Config from '../config';
 import { UserModel } from '../models/user';
+import jwt from 'jsonwebtoken';
 
-const strategyOptions = {
-  usernameField: 'email',
-  passwordField: 'password',
-  passReqToCallback: true,
+export const generateAuthToken = (user) => {
+  //get the private key from the config file -> environment variable
+  const payload = {
+    userId: user._id,
+    nombre: user.nombre,
+    apellido: user.apellido,
+    email: user.email,
+  };
+//   console.log('payload',payload);
+  const token = jwt.sign(payload, process.env.TOKEN_SECRET_KEY, {
+    expiresIn: '1h',
+  });
+  return token;
 };
 
-const login = async (req, email, password, done) => {
-    console.log("LOGINNN en auth")
-    const user = await UserModel.findOne({ email, password  });  //sino funciona utilizar la otra forma
+export const checkAuth = async (req, res, next) => {
+    const token = req.headers['x-auth-token'];
+    if (!token) return res.status(401).json({ msg: 'Unauthorized' });
   
-    if (!user) return done(null, false, { mensaje: 'Usuario no encontrado' });
-
-    console.log('ENCONTRE UN USUARIO', user);
-    return done(null, user);
-};
-
-
-const registro = async (req, nombre, apellido,email, password, direccion, edad, telefono, foto, done) => {
-    console.log('REGISTRO!! en auth');
     try {
-      const newUser = await UserModel.create({ 
-            nombre, 
-            apellido, 
-            email, 
-            password, 
-            direccion, 
-            edad, 
-            telefono, 
-            foto
-    });
-    console.log('mi nuevo user', newUser);
-      return done(null, newUser);
-    } catch (err) {
-      console.log('Hubo un error!');
-      console.log(err);
-      return done(null, false, { mensaje: 'Error Inesperado', err });
-    }
-};
+      const decode = jwt.verify(
+        token,
+        process.env.TOKEN_SECRET_KEY
+      );
+      console.log('TOKEN DECODIFICADO');
+      // console.log(decode);
+      const user = await UserModel.findById(decode.userId);
   
-
-
-export const loginFunc = new LocalStrategy(strategyOptions, login);
-export const registroFunc = new LocalStrategy(strategyOptions, registro);
-
-passport.serializeUser((user, done) => {
-    console.log('Se Ejecuta el serializeUser');
-    done(null, user._id);
-});
-
-passport.deserializeUser((userId, done) => {
-    console.log('Se Ejecuta el desserializeUser');
-    UserModel.findById(userId).then((user) => {
-      return done(null, user);
-    })
-});
+      if (!user) return res.status(400).json({ msg: 'Unauthorized' });
+  
+      req.user = user;
+      next();
+    } catch (err) {
+      console.log(err);
+      return res.status(401).json({ msg: 'Unauthorized' });
+    }
+  };

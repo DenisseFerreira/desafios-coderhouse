@@ -1,36 +1,29 @@
 import { UserModel } from '../models/user';
-import passport from 'passport';
+import { generateAuthToken } from '../services/auth';
 
 export const getlogin = async (req, res) => {
-    const { email } = req.query;
-    const login = await UserModel.findOne({email});
-    // que no devuelva el pass
-    login.password = '';
-    res.json({
-        Datos: login
-      });
+  console.log('pruebas');
+    // const { email } = req.query;
+    // const login = await UserModel.findOne({email});
+    // login.password = '';
+    // res.json({
+    //     Datos: login
+    //   });
 };
-const passportOptions = { };
+
 export const login = async (req, res, next) => {
-  // const { email, password } = req.body;
-  // const login = await UserModel.findOne({
-  //   email, 
-  //   password
-  // });
-  // console.log('Usario logueado: ', login);
-
-  // // colocar en caso de error*** que el usario no este logueado
-  //   res.json({
-  //     login: login,
-  //     msg: "Usuario logueado con éxito"
-  //   });
-  console.log('llegando al login controller....');
+  let { nombre, password } = req.body;
+  const user = await UserModel.findOne({ nombre });
   
-  passport.authenticate('login', passportOptions),
+  if (!user || !user.isValidPassword(password))
+    return res.status(401).json({ msg: 'Invalid nombre/Password' });
 
-    res.json({ msg: 'Welcome!', user: req.user });
- 
-  console.log('me fui');
+  const token = generateAuthToken(user);
+
+  res.header('x-auth-token', token).json({
+    msg: 'login OK',
+    token,
+  });
 };
 
 export const updateLogin = async (req,res)=>  {

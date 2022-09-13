@@ -11,7 +11,7 @@ tags:
   - name: Proyecto final > login
   - name: Proyecto final > Signup
 paths:
-  /080/api/productos:
+  /api/productos:
     get:
       tags:
         - Proyecto final > productos
@@ -90,7 +90,7 @@ paths:
                   _id: 631ef5395db6c2a6d34e3985
                   createdAt: '2022-09-12T09:00:41.284Z'
                   updatedAt: '2022-09-12T09:00:41.284Z'
-  /080/api/productos/628dc0887950fd404cc30e49:
+  /api/productos/628dc0887950fd404cc30e49:
     get:
       tags:
         - Proyecto final > productos
@@ -140,7 +140,7 @@ paths:
                   codigo: 5690
                   stock: 3
                   foto: https://www.google.com/aclk?sa=lEiJQYz_ZI0jU
-  /080/api/productos/631d5d93babe49bd525b05ba:
+  /api/productos/631d5d93babe49bd525b05ba:
     put:
       tags:
         - Proyecto final > productos
@@ -210,7 +210,7 @@ paths:
                   codigo: 3050
                   createdAt: '2022-09-11T04:01:23.960Z'
                   updatedAt: '2022-09-12T09:00:25.648Z'
-  /080/api/productos/628dc0887950fd404cc30e48:
+  /api/productos/628dc0887950fd404cc30e48:
     delete:
       tags:
         - Proyecto final > productos
@@ -253,7 +253,7 @@ paths:
                 type: object
               example:
                 msg: Producto eliminado
-  /080/api/carrito:
+  /api/carrito:
     get:
       tags:
         - Proyecto final > carrito
@@ -397,7 +397,7 @@ paths:
                   _id: 62cbb95c587e59f7f4f41695
                   createdAt: '2022-07-11T05:47:08.696Z'
                   updatedAt: '2022-07-11T05:47:08.696Z'
-  /080/api/carrito/631ef5b75db6c2a6d34e398d:
+  /api/carrito/631ef5b75db6c2a6d34e398d:
     delete:
       tags:
         - Proyecto final > carrito
@@ -440,7 +440,7 @@ paths:
                 type: object
               example:
                 msg: Carrito eliminado
-  /080/api/carrito/628fa9864a9578f68e7235d3/productos:
+  /api/carrito/628fa9864a9578f68e7235d3/productos:
     get:
       tags:
         - Proyecto final > carrito
@@ -576,7 +576,7 @@ paths:
                   createdAt: '2022-05-26T16:23:34.156Z'
                   updatedAt: '2022-09-12T09:04:25.200Z'
                 msg: Producto agregado al carrito
-  /080/api/carrito/628fa9864a9578f68e7235d3/productos/628dc0887950fd404cc30e44:
+  /api/carrito/628fa9864a9578f68e7235d3/productos/628dc0887950fd404cc30e44:
     delete:
       tags:
         - Proyecto final > carrito
@@ -634,7 +634,7 @@ paths:
                   createdAt: '2022-05-26T16:23:34.156Z'
                   updatedAt: '2022-09-12T09:04:29.554Z'
                 msg: Producto eliminado del carrito
-  /080/api/login:
+  /api/login:
     post:
       tags:
         - Proyecto final > login
@@ -698,7 +698,7 @@ paths:
                 msg: login OK
                 token: >-
                   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzFjMDM1M2IzOGNjNmZmY2JiMzdjNDUiLCJub21icmUiOiJzb2ZpdGEzIiwiYXBlbGxpZG8iOiJGZXJyZWlyYSIsImVtYWlsIjoiZmVycmVpcmEzQGdtYWlsLmNvbSIsImlhdCI6MTY2Mjk3MzUwNiwiZXhwIjoxNjYyOTc3MTA2fQ.Fne5LX12dNMG193GSVbgEfTM5LMzKcvzAWmgTxL3syY
-  /080/api/secure-data:
+  /api/secure-data:
     get:
       tags:
         - Proyecto final > login
@@ -748,7 +748,7 @@ paths:
                 type: object
               example:
                 msg: Llegaste a la data segura
-  /080/api/signup:
+  /api/signup:
     get:
       tags:
         - Proyecto final > Signup

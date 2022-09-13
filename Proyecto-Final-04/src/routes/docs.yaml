@@ -1,0 +1,1045 @@
+openapi: 3.0.0
+info:
+  title: CoderHouse
+  version: 1.0.0
+servers:
+  - url: localhost://
+tags:
+  - name: Proyecto final
+  - name: Proyecto final > productos
+  - name: Proyecto final > carrito
+  - name: Proyecto final > login
+  - name: Proyecto final > Signup
+paths:
+  /080/api/productos:
+    get:
+      tags:
+        - Proyecto final > productos
+      summary: todos los productos
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Proyecto final > productos
+      summary: crear producto
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                nombre: nuevo producto
+                descripcion: Para decorar
+                codigo: 1050
+                foto: https://www.google.com/aclk?sa=l&ai
+                precio: 1250
+                stock: 10
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '267'
+            ETag:
+              schema:
+                type: string
+                example: W/"10b-j7R3HgNE3cMYR03bdp7CqxcSh6w"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:00:41 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                NewProducto:
+                  nombre: nuevo producto
+                  descripcion: Para decorar
+                  foto: https://www.google.com/aclk?sa=l&ai
+                  precio: 1250
+                  stock: 10
+                  codigo: 1050
+                  _id: 631ef5395db6c2a6d34e3985
+                  createdAt: '2022-09-12T09:00:41.284Z'
+                  updatedAt: '2022-09-12T09:00:41.284Z'
+  /080/api/productos/628dc0887950fd404cc30e49:
+    get:
+      tags:
+        - Proyecto final > productos
+      summary: producto por id
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '187'
+            ETag:
+              schema:
+                type: string
+                example: W/"bb-X4hjvZw5lTYvB0dFtUrCVGKMxwA"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:01:24 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  _id: 628dc0887950fd404cc30e49
+                  nombre: Estuche
+                  precio: 5000
+                  descripcion: Para uso escolar
+                  codigo: 5690
+                  stock: 3
+                  foto: https://www.google.com/aclk?sa=lEiJQYz_ZI0jU
+  /080/api/productos/631d5d93babe49bd525b05ba:
+    put:
+      tags:
+        - Proyecto final > productos
+      summary: actualizar producto
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                nombre: itiytiktyik
+                descripcion: Para decorarkkuku
+                codigo: 3050
+                foto: https://www.google.com/aclk?sa=l&aikuk
+                precio: 1250
+                stock: 8
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '275'
+            ETag:
+              schema:
+                type: string
+                example: W/"113-gFoJCJYeFzje5NG2BNrH58B8AwU"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:00:31 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                resultadoUpDate:
+                  _id: 631d5d93babe49bd525b05ba
+                  nombre: itiytiktyik
+                  descripcion: Para decorarkkuku
+                  foto: https://www.google.com/aclk?sa=l&aikuk
+                  precio: 1250
+                  stock: 8
+                  codigo: 3050
+                  createdAt: '2022-09-11T04:01:23.960Z'
+                  updatedAt: '2022-09-12T09:00:25.648Z'
+  /080/api/productos/628dc0887950fd404cc30e48:
+    delete:
+      tags:
+        - Proyecto final > productos
+      summary: eliminar producto
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '28'
+            ETag:
+              schema:
+                type: string
+                example: W/"1c-fY8ZGV4KguoZAdt8ZcXyFp5TIpk"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:00:10 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                msg: Producto eliminado
+  /080/api/carrito:
+    get:
+      tags:
+        - Proyecto final > carrito
+      summary: todos los carritos
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '1330'
+            ETag:
+              schema:
+                type: string
+                example: W/"532-ZGc8AsiTs3aK5ohMsB8tf6m/4eE"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:02:41 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                Carritos:
+                  - _id: 628fa9864a9578f68e7235d3
+                    productos:
+                      - idProducto: 6294d061c1798a2a8e63969b
+                        cantidad: 5
+                      - idProducto: 628dc0887950fd404cc30e49
+                        cantidad: 5
+                      - idProducto: 628dc0887950fd404cc30e4b
+                        cantidad: 5
+                    createdAt: '2022-05-26T16:23:34.156Z'
+                    updatedAt: '2022-05-31T16:33:22.657Z'
+                  - _id: 628fa9d46c3f161dd6cf92ed
+                    productos: []
+                    createdAt: '2022-05-26T16:24:52.859Z'
+                    updatedAt: '2022-05-26T16:24:52.859Z'
+                  - _id: 628fadb4d47654a78918ed58
+                    productos: []
+                    createdAt: '2022-05-26T16:41:24.482Z'
+                    updatedAt: '2022-05-26T16:41:24.482Z'
+                  - _id: 628fadb7d47654a78918ed5a
+                    productos: []
+                    createdAt: '2022-05-26T16:41:27.731Z'
+                    updatedAt: '2022-05-26T16:41:27.731Z'
+                  - _id: 628fae0ad8dd151ce78a88fa
+                    productos: []
+                    createdAt: '2022-05-26T16:42:50.866Z'
+                    updatedAt: '2022-05-26T16:42:50.866Z'
+                  - _id: 628fb1d252114fe8a6888470
+                    productos: []
+                    createdAt: '2022-05-26T16:58:58.784Z'
+                    updatedAt: '2022-05-26T16:58:58.784Z'
+                  - _id: 6294d0b4c1798a2a8e6396a2
+                    productos: []
+                    createdAt: '2022-05-30T14:12:04.747Z'
+                    updatedAt: '2022-05-30T14:12:04.747Z'
+                  - _id: 62cbb95c587e59f7f4f41695
+                    productos: []
+                    createdAt: '2022-07-11T05:47:08.696Z'
+                    updatedAt: '2022-07-11T05:47:08.696Z'
+                  - _id: 631d5d58babe49bd525b05b2
+                    productos: []
+                    createdAt: '2022-09-11T04:00:24.163Z'
+                    updatedAt: '2022-09-11T04:00:24.163Z'
+    post:
+      tags:
+        - Proyecto final > carrito
+      summary: A - crear carrito
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                user: usuario
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '139'
+            ETag:
+              schema:
+                type: string
+                example: W/"8b-RdE9sK7OU0R0Nf2ODANo+YoxBy0"
+            Date:
+              schema:
+                type: string
+                example: Mon, 11 Jul 2022 05:47:08 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                Carrito:
+                  productos: []
+                  _id: 62cbb95c587e59f7f4f41695
+                  createdAt: '2022-07-11T05:47:08.696Z'
+                  updatedAt: '2022-07-11T05:47:08.696Z'
+  /080/api/carrito/631ef5b75db6c2a6d34e398d:
+    delete:
+      tags:
+        - Proyecto final > carrito
+      summary: B - elimina carrito
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '27'
+            ETag:
+              schema:
+                type: string
+                example: W/"1b-VidGHYLpPXJdGWW/ojEjBOZj4Lo"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:04:00 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                msg: Carrito eliminado
+  /080/api/carrito/628fa9864a9578f68e7235d3/productos:
+    get:
+      tags:
+        - Proyecto final > carrito
+      summary: C - Productos del carrito
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '664'
+            ETag:
+              schema:
+                type: string
+                example: W/"298-bSG7eTzX2l1S5fKoXcRnRxHjO9g"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:04:17 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                ProductosDelCarrito:
+                  - _id: 6294d061c1798a2a8e63969b
+                    nombre: Pegatinas
+                    descripcion: Para decorar
+                    foto: https://www.google.com/aclk?sa=l&ai
+                    precio: 1250
+                    stock: 10
+                    codigo: 1050
+                    createdAt: '2022-05-30T14:10:41.911Z'
+                    updatedAt: '2022-05-30T14:10:41.911Z'
+                  - _id: 628dc0887950fd404cc30e49
+                    nombre: Estuche
+                    precio: 5000
+                    descripcion: Para uso escolar
+                    codigo: 5690
+                    stock: 3
+                    foto: https://www.google.com/aclk?sa=lEiJQYz_ZI0jU
+                  - _id: 628dc0887950fd404cc30e4b
+                    nombre: Linterna
+                    precio: 4200
+                    descripcion: Para uso escolar
+                    codigo: 5690
+                    stock: 3
+                    foto: https://www.google.com/aclk?sa=l&ai=DChcSEwie9K
+                msg: Productos del carrito
+    post:
+      tags:
+        - Proyecto final > carrito
+      summary: ' D - Agregar productos'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                idProducto: 628dc0887950fd404cc30e4b
+                cantidad: 5
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '395'
+            ETag:
+              schema:
+                type: string
+                example: W/"18b-hUOJnr+0pRu+3GmScAOxGiC5EDc"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:04:29 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                Carrito:
+                  _id: 628fa9864a9578f68e7235d3
+                  productos:
+                    - idProducto: 6294d061c1798a2a8e63969b
+                      cantidad: 5
+                    - idProducto: 628dc0887950fd404cc30e49
+                      cantidad: 5
+                    - idProducto: 628dc0887950fd404cc30e4b
+                      cantidad: 5
+                    - idProducto: 628dc0887950fd404cc30e4b
+                      cantidad: 5
+                  createdAt: '2022-05-26T16:23:34.156Z'
+                  updatedAt: '2022-09-12T09:04:25.200Z'
+                msg: Producto agregado al carrito
+  /080/api/carrito/628fa9864a9578f68e7235d3/productos/628dc0887950fd404cc30e44:
+    delete:
+      tags:
+        - Proyecto final > carrito
+      summary: E - Elimina producto
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '457'
+            ETag:
+              schema:
+                type: string
+                example: W/"1c9-gW25HGBFXRrotT7RTvMnP2zWcvs"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:04:45 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                nuevoCarrito:
+                  _id: 628fa9864a9578f68e7235d3
+                  productos:
+                    - idProducto: 6294d061c1798a2a8e63969b
+                      cantidad: 5
+                    - idProducto: 628dc0887950fd404cc30e49
+                      cantidad: 5
+                    - idProducto: 628dc0887950fd404cc30e4b
+                      cantidad: 5
+                    - idProducto: 628dc0887950fd404cc30e4b
+                      cantidad: 5
+                    - idProducto: 628dc0887950fd404cc30e4b
+                      cantidad: 5
+                  createdAt: '2022-05-26T16:23:34.156Z'
+                  updatedAt: '2022-09-12T09:04:29.554Z'
+                msg: Producto eliminado del carrito
+  /080/api/login:
+    post:
+      tags:
+        - Proyecto final > login
+      summary: login con token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                nombre: sofita3
+                password: contrasena
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            x-auth-token:
+              schema:
+                type: string
+                example: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzFjMDM1M2IzOGNjNmZmY2JiMzdjNDUiLCJub21icmUiOiJzb2ZpdGEzIiwiYXBlbGxpZG8iOiJGZXJyZWlyYSIsImVtYWlsIjoiZmVycmVpcmEzQGdtYWlsLmNvbSIsImlhdCI6MTY2Mjk3MzUwNiwiZXhwIjoxNjYyOTc3MTA2fQ.Fne5LX12dNMG193GSVbgEfTM5LMzKcvzAWmgTxL3syY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '300'
+            ETag:
+              schema:
+                type: string
+                example: W/"12c-ydlzKXK83wEvleIaVAJ3QX/tT34"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:05:06 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                msg: login OK
+                token: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzFjMDM1M2IzOGNjNmZmY2JiMzdjNDUiLCJub21icmUiOiJzb2ZpdGEzIiwiYXBlbGxpZG8iOiJGZXJyZWlyYSIsImVtYWlsIjoiZmVycmVpcmEzQGdtYWlsLmNvbSIsImlhdCI6MTY2Mjk3MzUwNiwiZXhwIjoxNjYyOTc3MTA2fQ.Fne5LX12dNMG193GSVbgEfTM5LMzKcvzAWmgTxL3syY
+  /080/api/secure-data:
+    get:
+      tags:
+        - Proyecto final > login
+      summary: Data segura
+      parameters:
+        - name: x-auth-token
+          in: header
+          schema:
+            type: string
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzFjMDM1M2IzOGNjNmZmY2JiMzdjNDUiLCJub21icmUiOiJzb2ZpdGEzIiwiYXBlbGxpZG8iOiJGZXJyZWlyYSIsImVtYWlsIjoiZmVycmVpcmEzQGdtYWlsLmNvbSIsImlhdCI6MTY2Mjk3MzUwNiwiZXhwIjoxNjYyOTc3MTA2fQ.Fne5LX12dNMG193GSVbgEfTM5LMzKcvzAWmgTxL3syY
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '35'
+            ETag:
+              schema:
+                type: string
+                example: W/"23-pS1MUWqdP10j59SLSyPB3WJQ+HU"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:05:58 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                msg: Llegaste a la data segura
+  /080/api/signup:
+    get:
+      tags:
+        - Proyecto final > Signup
+      summary: todos los registros
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '5335'
+            ETag:
+              schema:
+                type: string
+                example: W/"14d7-yTQyy7/CkMBXr4QZ3ofKXYapqos"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:07:04 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                Registros:
+                  - _id: 62d781b789b16de3dab52226
+                    nombre: Elizabeth
+                    apellido: Ferreira
+                    email: ferreira.denisse@gmail.com
+                    password: fadfegrbgrgrwgrw
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    foto: urlFoto
+                    esta_logueado: true
+                    token: eltokenDelUsaurio
+                    createdAt: '2022-07-20T04:16:55.352Z'
+                    updatedAt: '2022-07-20T04:16:55.352Z'
+                  - _id: 62d80f7d2e36bb307e3fc5c4
+                    email: ferreira.denisse@gmail.com
+                    password: fadfegrbgrgrwgrw
+                    createdAt: '2022-07-20T14:21:50.005Z'
+                    updatedAt: '2022-07-20T14:21:50.005Z'
+                  - _id: 62d80fe9d21e290c7cb51429
+                    email: ferreira.denisse@gmail.com
+                    password: fadfegrbgrgrwgrw
+                    createdAt: '2022-07-20T14:23:37.223Z'
+                    updatedAt: '2022-07-20T14:23:37.223Z'
+                  - _id: 62d80ffcd21e290c7cb5142b
+                    email: ferreira.denisse2@gmail.com
+                    password: fadfegrbgrgrwgrw
+                    createdAt: '2022-07-20T14:23:56.076Z'
+                    updatedAt: '2022-07-20T14:23:56.076Z'
+                  - _id: 631ac6225dd38b3ed99e1536
+                    nombre: sofita
+                    apellido: Ferreira
+                    email: ferreira@gmail.com
+                    password: contrasena
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-09T04:50:42.822Z'
+                    updatedAt: '2022-09-09T04:50:42.822Z'
+                  - _id: 631b31439ec330af027c02da
+                    nombre: sofita2
+                    apellido: Ferreira
+                    email: ferreira2@gmail.com
+                    password: >-
+                      $2b$10$.ZKrQNO8Q3ee2oYPNm6.Leri2kWh/a5o.1u06g4sLzX2ONMmXycFa
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-09T12:27:47.618Z'
+                    updatedAt: '2022-09-09T12:27:47.618Z'
+                  - _id: 631c0353b38cc6ffcbb37c45
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$K3QTRqTZXutLgp8uPqlW5uYK52HUy.Orgywh0K9shZgAAF5egW7QW
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-10T03:24:03.559Z'
+                    updatedAt: '2022-09-10T03:24:03.559Z'
+                  - _id: 631c064fd9acf1ff62727889
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$e6EMR1kP.GnSxxzo3OeQne2UZ1kIu0eDutZsLNEYnwLlo.GSbsM7G
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-10T03:36:47.040Z'
+                    updatedAt: '2022-09-10T03:36:47.040Z'
+                  - _id: 631c06b1d9acf1ff6272788c
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$0agVP4ziJxmm8LTyrMhK.eOMdbPUJ5Gb3Cn42Z9PSTkOMXIl8L71i
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-10T03:38:25.909Z'
+                    updatedAt: '2022-09-10T03:38:25.909Z'
+                  - _id: 631c06f1c15ed066545cff16
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$S3BbPF1mfoh1fCefeKmGJOwITKYHAMuEPUtUMT6sr0i2bfWcb3oTq
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-10T03:39:29.439Z'
+                    updatedAt: '2022-09-10T03:39:29.439Z'
+                  - _id: 631c070a0334244cda9ecee4
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$KxrZtB5Fldqc7Quz8ILa8.6TIBt2CzDQMscT2zpo6pvzQDB9Gpz.K
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-10T03:39:54.760Z'
+                    updatedAt: '2022-09-10T03:39:54.760Z'
+                  - _id: 631c076750635de87f8a7a16
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$HFVJK38Ey71Kz0OOwk9YguQ0.sV3QB2sqe4bd06Yil90ZAuycLmEy
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-10T03:41:27.083Z'
+                    updatedAt: '2022-09-10T03:41:27.083Z'
+                  - _id: 631c085750635de87f8a7a19
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$4QxjdrzyFbYoiiEx5NbBGOTm0QjM6GcwIF5WCmIa0PUWOi8X4gdJm
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-10T03:45:27.081Z'
+                    updatedAt: '2022-09-10T03:45:27.081Z'
+                  - _id: 631d56273c53e355a2bb4223
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$jcCm34UzeOJd/5tcvh57AuWtBTeri/fKbc03SZ3WjzKMaHqOmh9hy
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-11T03:29:43.495Z'
+                    updatedAt: '2022-09-11T03:29:43.495Z'
+                  - _id: 631d56ab3cdf6b9f0ec6d42d
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$TcDzfNjjSCQ0MUG3v/OamOleUpZnnc4i3z31Ub2N93pVFKgT3o7nS
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-11T03:31:55.735Z'
+                    updatedAt: '2022-09-11T03:31:55.735Z'
+                  - _id: 631d56b03cdf6b9f0ec6d430
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$/0cRm74jNefRCZ5eE5yEVO2Uxo0WNMfC9ufRZDjBDF2.iNl9xJ7se
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-11T03:32:00.164Z'
+                    updatedAt: '2022-09-11T03:32:00.164Z'
+                  - _id: 631d56b33cdf6b9f0ec6d433
+                    nombre: sofita3
+                    apellido: Ferreira
+                    email: ferreira3@gmail.com
+                    password: >-
+                      $2b$10$e007qIPsgJ2Ag.aGchMSYOqYQt6kd0.X3rhUwXXcPivBcqVEEfR76
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-11T03:32:03.551Z'
+                    updatedAt: '2022-09-11T03:32:03.551Z'
+                  - _id: 631ef6a79263a9258e52a507
+                    nombre: sofita4
+                    apellido: Ferreira
+                    email: ferreira4@gmail.com
+                    password: >-
+                      $2b$10$BmyHNN7773HaVJj5zuofHe82vzmjv3iYTCjfJVtIAL.nijMXDKROS
+                    direccion: En mi casita 123
+                    edad: 10
+                    telefono: 519774885
+                    createdAt: '2022-09-12T09:06:47.964Z'
+                    updatedAt: '2022-09-12T09:06:47.964Z'
+    post:
+      tags:
+        - Proyecto final > Signup
+      summary: crear singup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                nombre: sofita4
+                apellido: Ferreira
+                email: ferreira4@gmail.com
+                password: contrasena
+                direccion: En mi casita 123
+                edad: 10
+                telefono: 519774885
+                foto: urlFoto
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: ''
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            x-auth-token:
+              schema:
+                type: string
+                example: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzFlZjZhNzkyNjNhOTI1OGU1MmE1MDciLCJub21icmUiOiJzb2ZpdGE0IiwiYXBlbGxpZG8iOiJGZXJyZWlyYSIsImVtYWlsIjoiZmVycmVpcmE0QGdtYWlsLmNvbSIsImlhdCI6MTY2Mjk3MzYwOCwiZXhwIjoxNjYyOTc3MjA4fQ.-urcxafOq4m48VQII7anlB62_1xvXqlg8XHPI5xbtrc
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '25'
+            ETag:
+              schema:
+                type: string
+                example: W/"19-bJWF1qkk7u6KtbH6F4uDZWDpMB4"
+            Date:
+              schema:
+                type: string
+                example: Mon, 12 Sep 2022 09:06:48 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                msg: Registro creado

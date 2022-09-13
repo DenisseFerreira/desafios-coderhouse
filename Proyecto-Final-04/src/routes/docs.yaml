@@ -5,16 +5,15 @@ info:
 servers:
   - url: localhost://
 tags:
-  - name: Proyecto final
-  - name: Proyecto final > productos
-  - name: Proyecto final > carrito
-  - name: Proyecto final > login
-  - name: Proyecto final > Signup
+  - name: productos
+  - name: carrito
+  - name: login
+  - name: Signup
 paths:
   /api/productos:
     get:
       tags:
-        - Proyecto final > productos
+        - productos
       summary: todos los productos
       responses:
         '200':
@@ -23,7 +22,7 @@ paths:
             application/json: {}
     post:
       tags:
-        - Proyecto final > productos
+        - productos
       summary: crear producto
       requestBody:
         content:
@@ -93,7 +92,7 @@ paths:
   /api/productos/628dc0887950fd404cc30e49:
     get:
       tags:
-        - Proyecto final > productos
+        - productos
       summary: producto por id
       responses:
         '200':
@@ -143,7 +142,7 @@ paths:
   /api/productos/631d5d93babe49bd525b05ba:
     put:
       tags:
-        - Proyecto final > productos
+        - productos
       summary: actualizar producto
       requestBody:
         content:
@@ -213,7 +212,7 @@ paths:
   /api/productos/628dc0887950fd404cc30e48:
     delete:
       tags:
-        - Proyecto final > productos
+        - productos
       summary: eliminar producto
       responses:
         '200':
@@ -256,7 +255,7 @@ paths:
   /api/carrito:
     get:
       tags:
-        - Proyecto final > carrito
+        - carrito
       summary: todos los carritos
       responses:
         '200':
@@ -340,7 +339,7 @@ paths:
                     updatedAt: '2022-09-11T04:00:24.163Z'
     post:
       tags:
-        - Proyecto final > carrito
+        - carrito
       summary: A - crear carrito
       requestBody:
         content:
@@ -400,7 +399,7 @@ paths:
   /api/carrito/631ef5b75db6c2a6d34e398d:
     delete:
       tags:
-        - Proyecto final > carrito
+        - carrito
       summary: B - elimina carrito
       responses:
         '200':
@@ -443,7 +442,7 @@ paths:
   /api/carrito/628fa9864a9578f68e7235d3/productos:
     get:
       tags:
-        - Proyecto final > carrito
+        - carrito
       summary: C - Productos del carrito
       responses:
         '200':
@@ -509,7 +508,7 @@ paths:
                 msg: Productos del carrito
     post:
       tags:
-        - Proyecto final > carrito
+        - carrito
       summary: ' D - Agregar productos'
       requestBody:
         content:
@@ -579,7 +578,7 @@ paths:
   /api/carrito/628fa9864a9578f68e7235d3/productos/628dc0887950fd404cc30e44:
     delete:
       tags:
-        - Proyecto final > carrito
+        - carrito
       summary: E - Elimina producto
       responses:
         '200':
@@ -637,7 +636,7 @@ paths:
   /api/login:
     post:
       tags:
-        - Proyecto final > login
+        - login
       summary: login con token
       requestBody:
         content:
@@ -701,7 +700,7 @@ paths:
   /api/secure-data:
     get:
       tags:
-        - Proyecto final > login
+        - login
       summary: Data segura
       parameters:
         - name: x-auth-token
@@ -751,7 +750,7 @@ paths:
   /api/signup:
     get:
       tags:
-        - Proyecto final > Signup
+        - Signup
       summary: todos los registros
       responses:
         '200':
@@ -974,7 +973,7 @@ paths:
                     updatedAt: '2022-09-12T09:06:47.964Z'
     post:
       tags:
-        - Proyecto final > Signup
+        -  Signup
       summary: crear singup
       requestBody:
         content:
